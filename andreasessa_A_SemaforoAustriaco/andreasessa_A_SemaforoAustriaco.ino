@@ -6,6 +6,7 @@ int ledyellow2 = 7;
 int ledgreen2 = 6;
 int tempo = 1000;
 int tempodellampeggio = 800;
+int numerolampeggi = 4
 
 void metodolampeggio1(){
   
@@ -18,7 +19,7 @@ void metodolampeggio1(){
   digitalWrite(ledgreen1,HIGH);
   delay(tempo);
   
-  for (int i = 0; i < 5; i++)
+  for (int i = 0; i < numerolampeggi; i++)
   {
     digitalWrite(ledgreen1,HIGH);
     delay(tempodellampeggio);
@@ -38,7 +39,7 @@ void metodolampeggio2(){
   digitalWrite(ledred1,HIGH);
   digitalWrite(ledgreen2,HIGH);
   delay(tempo);
-  for (int i = 0; i < 5; i++)
+  for (int i = 0; i < numerolampeggi; i++)
   {
     digitalWrite(ledgreen2,HIGH);
     delay(tempodellampeggio);
