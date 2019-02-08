@@ -4,9 +4,10 @@ int ledgreen1 = 10;
 int ledred2 = 9;
 int ledyellow2 = 7;
 int ledgreen2 = 6;
-int tempo = 1000;
-int tempodellampeggio = 800;
-int numerolampeggi = 4
+int tempo = 2000;
+int tempodellampeggio = 1000;
+int numerolampeggi = 4;
+Serial.begin(9600);
 
 void metodolampeggio1(){
   
@@ -66,11 +67,17 @@ void setup() {
                
 void loop() {
   // put your main code here, to run repeatedly:
+
+  Serial.printIn("Inserisci numero lampeggi");
+  int numerolampeggi = Serial.readString().toInt();
+  Serial.printIn("inserisci durata del led giallo");
+  int durataledgiallo = Serial.readString().toInt();
+  Serial.printIn("inserisci durata del semaforo");
+  int duratasemaforo = Serial.readString().toInt();
+  Serial.printIn("inserisci durata di un lampeggio");
+  int tempolampeggio = Serial.readString().toInt();
+  
   metodolampeggio1();
   metodolampeggio2();
   
-  
-  
-  
-
-}
+  }
